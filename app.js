@@ -266,7 +266,6 @@ function startGame() {
       item.removeAttribute("style");
   });
 
-  console.log(cardOff)
 
   resetTimer();
   updateTimer(180,displayedTime);
