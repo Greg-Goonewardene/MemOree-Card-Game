@@ -90,7 +90,7 @@ displayCards();
 const card = document.querySelectorAll('.card')
 
 card.forEach((item) => {
-	item.addEventListener('click', () => {
+	item.addEventListener('click', function flip() {
       item.classList.add('active')
 
 			const flippedCards = document.querySelectorAll('.active img.cardsOff');
@@ -144,7 +144,8 @@ card.forEach((item) => {
          });
        }},300);
 		  });
-	  });
+      item.removeEventListener('click', flip())
+    });
   });
 });
 
@@ -266,6 +267,7 @@ function startGame() {
       item.removeAttribute("style");
   });
 
+  console.log(cardOff)
 
   resetTimer();
   updateTimer(180,displayedTime);
