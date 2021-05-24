@@ -144,7 +144,6 @@ card.forEach((item) => {
          });
        }},300);
 		  });
-      item.removeEventListener('click', flip())
     });
   });
 });
