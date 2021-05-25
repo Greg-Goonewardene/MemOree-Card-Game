@@ -170,7 +170,7 @@ function updateTimer(time,displayedTime) {
       gameOver.style.display = 'initial';
     }
 
-    setInterval(function() {
+    setTimeout(function() {
       if(scoreBoard.innerHTML === '26') {
         clearInterval(timeUpdater);
         board.style.pointerEvents = 'none';
